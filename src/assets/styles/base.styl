@@ -1,22 +1,19 @@
-@import 'dist/reset'
+@import 'reset'
 
-font-face(fontFamily, fileName, fontWeight = normal, fontStyle = normal, path = '/fonts/',svgLabel='')
-	@font-face
-		font-family fontFamily
-		src url(path + fileName + '.ttf') format("truetype")
-		font-weight fontWeight
-		font-style fontStyle
+@import 'mixins'
 
-font-face('font', 'font')
+@import 'var'
 
-os = 'font', cursive
+@import 'fonts'
 
-html
-	width 100%
+html, body
 	width 100vw
+	// min-width 1360px
 body
-	font-family: os
-	font-size 0
-	width 100%
+	font-family: $main-font
+	color $can-push
+	background-color #FBFBFB
+	font-weight 400
 	width 100vw
-	
+
+@import 'ui'

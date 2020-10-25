@@ -1,14 +1,19 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import Axios from 'axios'
-
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-	state: {
-	},
-	mutations: {
+import ModuleUI from './ui'
+
+const store = new Vuex.Store({
+	modules: {
+		ui: ModuleUI
 	},
 	actions: {
+		init({ dispatch, commit }) {
+		}
 	}
 })
+
+store.dispatch('init')
+
+export default store
